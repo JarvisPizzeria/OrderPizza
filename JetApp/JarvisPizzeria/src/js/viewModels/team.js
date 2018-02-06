@@ -5,13 +5,40 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/team-card/loader'],
  function(oj, ko, $) {
-  
-    function IncidentsViewModel() {
+ 
+    function TeamViewModel() {
       var self = this;
       // Below are a subset of the ViewModel methods invoked by the ojModule binding
       // Please reference the ojModule jsDoc for additional available methods.
+      self.teammembers = [
+        {
+          name: 'Marcel van de Glind',
+          avatar: 'css/images/Marcel.png',
+          title: 'The Cloud Architect of MyFMW',
+          blog: 'https://myfmw.wordpress.com',
+          linkedIn: 'https://www.linkedin.com/in/marcel-van-de-glind-05209912/'
+        },
+        {
+          name: 'Marc Kuijpers',
+          avatar: 'css/images/Marc.png',
+          title: 'Cloud Ninja @RubiX',
+          blog: 'http://rubix.nl/blogs',
+          linkedIn: 'https://www.linkedin.com/in/mjkuijpers/'
+        },
+        {
+          name: 'Richard Olrichs',
+          avatar: 'css/images/Richard.png',
+          title: 'Oracle Early Adopter @The Future Group',
+          blog: 'http://www.olrichs.nl',
+          linkedIn: 'https://www.linkedin.com/in/richardolrichs/'
+        }
+      ];
+
+      $(function() {
+       // ko.applyBindings(new TeamViewModel(), document.getElementById('composite-container'));
+      });
 
       /**
        * Optional ViewModel method invoked when this ViewModel is about to be
@@ -25,7 +52,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
        * the promise is resolved
        */
       self.handleActivated = function(info) {
-        // Implement if needed
+        // Implement if needed        
       };
 
       /**
@@ -72,6 +99,6 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
      * each time the view is displayed.  Return an instance of the ViewModel if
      * only one instance of the ViewModel is needed.
      */
-    return new IncidentsViewModel();
+    return new TeamViewModel();
   }
 );

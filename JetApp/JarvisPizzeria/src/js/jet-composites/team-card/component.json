@@ -1,0 +1,29 @@
+{
+  "name": "team-card",
+  "displayName": "team-card",
+  "description": "A card element that can display an avatar or initials on one side and teammember information on the other.",
+  "version": "1.0.2",
+  "jetVersion": ">=4.0.0 <5.0.0",
+  "properties": {
+     "name": {
+       "description": "The teammember's full name.",
+       "type": "string"
+       },
+     "avatar": {
+       "description": "The url of the teammembers's image.",
+       "type": "string"
+       },
+     "title": {
+       "description": "The teammembers's job title.",
+       "type": "string"
+       },
+     "linkedIn": {
+       "description": "The url to LinkedIn.",
+       "type": "string"
+       },
+    "blog": {
+      "description": "The link to the blog.",
+      "type": "string"
+        }
+      }
+    }

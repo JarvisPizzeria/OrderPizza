@@ -3,8 +3,18 @@
  The Universal Permissive License (UPL), Version 1.0
  -->
 <div class="oj-hybrid-padding">
-  <h1>Team Content Area</h1>
-  <div>
-      Team.
-  </div>
+  <h1>The Jarvis Pizzeria Team</h1>
+  
+  <div id="sampleDemo" style="" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+      <div id="composite-container" class="oj-flex oj-sm-flex-items-initial">
+        <!-- ko foreach: teammembers -->
+          <team-card class="oj-flex-item" name="[[name]]" avatar="[[avatar]]" title="[[title]]" 
+            blog="[[blog]]" linkedIn="[[linkedIn]]">
+          </team-card>
+        <!-- /ko -->
+      </div>
+
+      
+    </div>
 </div>

@@ -5,7 +5,7 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
  function(oj, ko, $) {
   
     function DashboardViewModel() {
@@ -65,7 +65,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
       self.handleDetached = function(info) {
         // Implement if needed
       };
-    }
+    
 
     /*
      * Returns a constructor for the ViewModel so that the ViewModel is constructed
@@ -74,4 +74,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
      */
     return new DashboardViewModel();
   }
-);
+ });
+
+
+

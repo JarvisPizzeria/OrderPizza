@@ -1,0 +1,22 @@
+<div tabindex="0" role="group" class="team-card-flip-container"
+  data-bind="event: {click: flipCard, keypress: flipCard}, attr: {'aria-label': $props.name + ' Press Enter for more info.'}">
+  
+  <div class="team-card-front-side">
+    <!-- ko if: $props.avatar == null -->
+      <div class="team-card-avatar" data-bind="text: initials"></div>
+    <!-- /ko -->
+    <!-- ko if: $props.avatar != null -->
+      <img class="team-card-avatar" data-bind="attr: {src: $props.avatar, alt: $props.name}">
+    <!-- /ko -->
+    <h2 data-bind="text: $props.name"></h2>
+  </div>
+
+  <div class="team-card-back-side">
+    <div class="team-card-inner-back-side">
+      <h2 data-bind="text: $props.name"></h2>
+      <h5 data-bind="text: $props.title"></h5>
+      <!--h5 data-bind="text: $props.blog"></h5>
+      <h5 data-bind="text: $props.linkedIn"></h5-->        
+      </div>
+  </div>
+</div>

@@ -13,3 +13,8 @@
     padding: 1px;
     width: 30px;
 }
+
+#composite-container team-card .team-card-front-side {
+    background-image: url('images/Jarvis.png');
+  }
+
