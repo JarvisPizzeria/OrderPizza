@@ -2,8 +2,16 @@
   "name": "JarvisPizzeria",
   "version": "1.0.0",
   "description": "Delivering Pizzas on Oracle PaaS!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index"
+  },
+  "author": "Richard Olrichs",
   "dependencies": {
-    "@oracle/oraclejet": "~4.1.0"
+    "@oracle/oraclejet": "~4.1.0",
+    "express": "^4.13.4",
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -12,9 +20,5 @@
     "@oracle/oraclejet-tooling": "~4.1.0",
     "qunit-reporter-junit": "^1.1.1",
     "qunitjs": "^2.3.3"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "private": false
+  }
 }

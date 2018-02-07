@@ -3,16 +3,17 @@
  * The Universal Permissive License (UPL), Version 1.0
  */
 /*
- * Your about ViewModel code goes here
+ * Your customer ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojthematicmap'],
  function(oj, ko, $) {
   
-    function BlogViewModel() {
+    function RoadshowViewModel() {
       var self = this;
       // Below are a subset of the ViewModel methods invoked by the ojModule binding
       // Please reference the ojModule jsDoc for additional available methods.
-
+      self.layers = [{layer: 'countries'}];
+    
       /**
        * Optional ViewModel method invoked when this ViewModel is about to be
        * used for the View transition.  The application can put data fetch logic
@@ -72,6 +73,6 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
      * each time the view is displayed.  Return an instance of the ViewModel if
      * only one instance of the ViewModel is needed.
      */
-    return new BlogViewModel();
+    return new RoadshowViewModel();
   }
 );

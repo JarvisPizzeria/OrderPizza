@@ -19,6 +19,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
        self.router.configure({
          'home': {label: 'Home', isDefault: true},
          'team': {label: 'Team'},
+         'roadshow': {label: 'Roadshow'},
          'github': {label: 'Github'},
          'blog': {label: 'Blog'}
        });
@@ -30,6 +31,8 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
       {name: 'Team', id: 'team',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
+      {name: 'Roadshow', id: 'roadshow',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'},
       {name: 'Github', id: 'github',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
       {name: 'Blog', id: 'blog',
