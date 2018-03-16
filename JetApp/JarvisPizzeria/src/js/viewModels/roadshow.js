@@ -21,8 +21,9 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojtable', 'oj
                             $.each(presentation, function () {
                                 tempArray.push({
                                     PresentationId: this.PresentationId,
-                                    Organiser: this.Organiser,
                                     Date: this.Date,
+                                    Organiser: this.Organiser,
+                                    Event: this.Event,
                                     LocationCity: this.LocationCity,
                                     LocationCountry: this.LocationCountry
                                 });
