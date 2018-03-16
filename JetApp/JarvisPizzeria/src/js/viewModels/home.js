@@ -3,16 +3,19 @@
  * The Universal Permissive License (UPL), Version 1.0
  */
 /*
- * Your dashboard ViewModel code goes here
+ * Your home ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout','ojs/ojinputtext', 'ojs/ojlabel'],
  function(oj, ko, $) {
   
-    function DashboardViewModel() {
+    function HomeViewModel() {
       var self = this;
       // Below are a subset of the ViewModel methods invoked by the ojModule binding
       // Please reference the ojModule jsDoc for additional available methods.
-
+      
+      this.teVal = ko.observable("Tweets from us!");
+      
+      
       /**
        * Optional ViewModel method invoked when this ViewModel is about to be
        * used for the View transition.  The application can put data fetch logic
@@ -52,6 +55,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
        */
       self.handleBindingsApplied = function(info) {
         // Implement if needed
+        
+        
       };
 
       /*
@@ -72,8 +77,13 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
      * each time the view is displayed.  Return an instance of the ViewModel if
      * only one instance of the ViewModel is needed.
      */
-    return new DashboardViewModel();
-  }
+    return new HomeViewModel();
+  };
+
+  $(document).ready(function ()
+  {
+    twttr && twttr.widgets.load(document.querySelector('.twitter-timeline'));
+  });
  });
 
 
