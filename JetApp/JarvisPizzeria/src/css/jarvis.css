@@ -18,3 +18,7 @@
     background-image: url('images/Jarvis.png');
   }
 
+.twt-button {
+    display: inline-block;
+    padding: 4px 8px;
+}
